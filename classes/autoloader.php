@@ -70,6 +70,11 @@ class autoloader
 		return $this;
 	}
 
+	function notAliasNamespace($namespace)
+	{
+		return $this->addNamespaceAlias($namespace, null);
+	}
+
 	function addNamespaceAliases($alias, array $targets)
 	{
 		foreach ($targets as & $target)
